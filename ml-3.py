@@ -15,7 +15,7 @@ PROJECTIVE_BORDER = 3.5 # >= border is good
 TRAIN_PATH = "complete/"
 path_len = len(TRAIN_PATH)
 TYPE = "border" # type = bad-17/good-73/border-10
-USE_TYPE = False
+USE_TYPE = True
 
 LOG = True
 SHOW_RESULT = True
@@ -53,13 +53,13 @@ def getThetas():
 				str(i) + ":" + img_path + "] " + \
 				str(theta_abs_r2) + " degree(s)")
 
-	write_file_r2 = 'json/rotation_thetas_r2_' + TYPE + '.json' \
-		if USE_TYPE else 'json/rotation_thetas_r2_' + TRAIN_N + '.json'
+	write_file_r2 = 'json/rotation_thetas_r2_' + str(TYPE) + '.json' \
+		if USE_TYPE else 'json/rotation_thetas_r2_' + str(TRAIN_N) + '.json'
 	with open(write_file_r2, 'w') as outfile:
 		json.dump(rotation_thetas_r2, outfile)
 
-	write_file_r1 = 'json/rotation_thetas_r1_' + TYPE + '.json' \
-		if USE_TYPE else 'json/rotation_thetas_r1_' + TRAIN_N + '.json'
+	write_file_r1 = 'json/rotation_thetas_r1_' + str(TYPE) + '.json' \
+		if USE_TYPE else 'json/rotation_thetas_r1_' + str(TRAIN_N) + '.json'
 	with open(write_file_r1, 'w') as outfile:
 		json.dump(rotation_thetas_r1, outfile)
 	
@@ -98,13 +98,13 @@ def getProjComponents():
 				str(i) + ":" + img_path + "]" + \
 				str(close_log_r2))
 
-	write_file_r2 = 'json/proj_components_r2_' + TYPE + '.json' \
-		if USE_TYPE else 'json/proj_components_r2_' + TRAIN_N + '.json'
+	write_file_r2 = 'json/proj_components_r2_' + str(TYPE) + '.json' \
+		if USE_TYPE else 'json/proj_components_r2_' + str(TRAIN_N) + '.json'
 	with open(write_file_r2, 'w') as outfile:
 		json.dump(proj_components_r2, outfile)
 
-	write_file_r1 = 'json/proj_components_r1_' + TYPE + '.json' \
-		if USE_TYPE else 'json/proj_components_r1_' + TRAIN_N + '.json'
+	write_file_r1 = 'json/proj_components_r1_' + str(TYPE) + '.json' \
+		if USE_TYPE else 'json/proj_components_r1_' + str(TRAIN_N) + '.json'
 	with open(write_file_r1, 'w') as outfile:
 		json.dump(proj_components_r1, outfile)
 	
