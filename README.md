@@ -47,6 +47,25 @@ For auto classifying the quality of photos as good and bad by analyzing the left
 - Updated to an Insequence version for classification: 1) rotation 2) projective
 	- ml-3.py
 	- updated peek.py
+- Min max results in table
+	- rotation: <5
+	- projective: >=3.5
+
+|rotation (100)	|	min 	|	max			|
+|:--------------|----------:|--------------:|
+|good (73)	   	|	0 (2)	|	5.72 (1)	|
+|bad (17)		|	1.18 (2)|	118.73(1)	|
+|borderline (10)|	0.13 (1)|	6.3 (1)		|
+
+|projective (100)	|	min 	|	max 	|
+|:------------------|----------:|----------:|
+|good (73)			|3.32 (1)	|	5.59 (1)|
+|bad (17)			|2.74 (1)	|	3.88 (1)|
+|borderline (10)	|3.29 (3)	|	4.47 (1)|
+
+- Not effective
+	- may depend on rotation or projective 
+	- So there may not be overlaps
 
 ### 02/13/2019-02/20/2019
 - ML Purpose:
