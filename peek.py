@@ -8,8 +8,8 @@ import glob
 import os
 import pdb
 
-FOLDER_PATH = 'processed_dataset/cmp/complete/'
-path_len = 9
+FOLDER_PATH = '../processed_dataset/cmp/incomplete/'
+path_len = len(FOLDER_PATH)
 suffix = -5
 
 # read mat

@@ -1,3 +1,7 @@
+# ml-2.py
+# This file is used to train homography matrices 
+# to learn to distinguish good and bad images
+# with updated border
 import peek
 import cv2
 import math

@@ -1,5 +1,5 @@
 # ml-4.py
-# write all json files to json/
+# for complete/ incomplete/ 5 and 3.5
 import peek
 import cv2
 import math
@@ -11,6 +11,8 @@ TEST_N = 100
 
 ROTATION_BORDER = 5 # < border is good
 PROJECTIVE_BORDER = 3.5 # >= border is good
+PROJECTIVE_BORDER_UP = 3.75 # >= 3.75 is good
+PROJECTIVE_BORDER_DOWN = 3.4 # < 3.4 is bad
 
 
 TRAIN_PATH = "../processed_dataset/cmp/complete/"

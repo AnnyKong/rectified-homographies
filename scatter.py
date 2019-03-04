@@ -81,9 +81,9 @@ def plot_histogram(data_good, data_bad, data_border):
 
 	ax.grid(True)
 	fig.tight_layout()
-	plt.show()
-
 	plt.savefig(WRITE_FILENAME)
+
+	plt.show()
 	plt.close()
 	print('>>>>>>[IMG] Histogram created>>>>>>>')
 	print('[IMG] view it: open ' + WRITE_FILENAME)
