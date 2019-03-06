@@ -201,9 +201,8 @@ def union(rotation_bads, proj_bads):
 
 def goods_to_json(goods):
 	write_file_goods_to_json = 'json/goods_' + str(TRAIN_N) + '.json'
-	with open(write_file_goods_to_json, "w") as f:
-		goods_in_json = json.dump(goods)
-		f.write(goods_in_json)
+	with open(write_file_goods_to_json, "w") as outfile:
+		json.dump(goods, outfile)
 
 def ml():
 	rotationGB = ml_rotation()
@@ -226,6 +225,7 @@ def ml():
 	projective_border_bads = set(projectiveGB[4])
 	total_border_bads = intersect(rotation_goods, projective_border_bads)
 
+	goods_to_json(sorted(list(total_goods)))
 
 
 	if SHOW_RESULT: 
