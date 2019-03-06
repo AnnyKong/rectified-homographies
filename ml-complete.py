@@ -1,5 +1,6 @@
 # based on ml-5.py
 # for complete/ borderline 3.4-3.75
+# 03/05 updated to write goods to json/goods_N.json
 import peek
 # import cv2
 import math
@@ -198,6 +199,12 @@ def union(rotation_bads, proj_bads):
 	union_set = rotation_bads.union(proj_bads)
 	return union_set
 
+def goods_to_json(goods):
+	write_file_goods_to_json = 'json/goods_' + str(TRAIN_N) + '.json'
+	with open(write_file_goods_to_json, "w") as f:
+		goods_in_json = json.dump(goods)
+		f.write(goods_in_json)
+
 def ml():
 	rotationGB = ml_rotation()
 	projectiveGB = ml_projective()
@@ -218,6 +225,8 @@ def ml():
 
 	projective_border_bads = set(projectiveGB[4])
 	total_border_bads = intersect(rotation_goods, projective_border_bads)
+
+
 
 	if SHOW_RESULT: 
 		sys.stdout.write('\r')

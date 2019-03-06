@@ -1,6 +1,32 @@
 # rectified-homographies (Slowglass research)
 For auto classifying the quality of photos as good and bad by analyzing the left homographies of photos.
 
+## HOW TO RUN
+```
+# run with the complete/ dir
+python3 ml-complete.py
+
+# run with the incomplete/ dir
+python3 ml-incomplete.py
+
+# for a plot showing the distribution of data points
+python3 scatter.py
+```
+
+### sample output
+```
+../processed_dataset/cmp/complete/ 99%
+[Rot+Proj] result goods=[4733, 4771, 4775, 4823, 4839, 4845, 4849, 4851, 4853, 4859, 4865, 4867, 4877, 4879, 4919, 4973, 4987, 4993, 4999, 5003, 5013, 5031, 5033, 5037, 5043, 5047, 5053, 5057, 5059, 5067, 5077, 5097, 5141, 5167, 5169, 5179, 5181, 5197, 5201, 5203, 5211, 5215, 5223, 5229,...]
+...
+[Rot+Proj] Results:
+ result good=5919
+ result bad=2207
+ result border=1806
+ result border_good=1408
+ result border_bad=398
+goods/all =0.5959524768425292
+```
+
 ## Current indicator
 - goods: [3.75, infty]
 - bads: [-infty, 3.4)
