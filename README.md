@@ -45,7 +45,26 @@ goods/all =0.5959524768425292
     - `json/*18873.json`
 
 ## Update log
-### 03/03/2019
+### 03/06/2019-03/13/2019
+- Finished:
+    - Depth Doc
+    - Depth examples
+        - On Google Drive
+    - Classification of ~500 images
+        - On grail server
+- Meeting on Sat notes:
+	Left graph: Color image Right graph: Depth image 3D Reconstruction: left -> right 
+	Blue – close White – far 
+	Classify photos into 5 categories: 
+	- Flip 
+	- All-Blue 
+	- Bad: Should be on one plane and no sudden color change, but large or sudden depth  change(color change in depth graph) 
+	- Sky-but-not-bad 
+	- Good 
+	    - Light effect – consistent ok 
+	    - Window – consistent ok 
+
+### 02/27/2019-03/06/2019
 - Updated scripts for it working with complete/ incomplete/
 - Using the following indicators
 	- goods: [3.75, infty]
