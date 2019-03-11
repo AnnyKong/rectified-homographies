@@ -79,6 +79,7 @@ goods/all =0.5959524768425292
     - ml-incomplete for incomplete/
         - incomplete-result.txt results saved
         - `json/*18873.json`
+- how to run: `python3 python/compose.py json/goods_10075.json ../processed_dataset/cmp/complete/ compose/complete/`
 
 ### 02/20/2019-02/27/2019
 - Updated to a new way of getting the effect of projection on the distortion of photos
